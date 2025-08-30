@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/Dhiraj Kumar Rouniyar/MLflow-DVC
+Author: Dhiraj Kumar Rouniyar
+Author-email: dkrouniyar@wpi.edu
+Project-URL: Bug Tracker, https://github.com/Dhiraj Kumar Rouniyar/MLflow-DVC/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# MLflow-DVC

@@ -1,0 +1,21 @@
+tensorflow == 2.12.0
+pandas
+dvc
+mlflow == 2.2.2
+notebook
+numpy
+matplotlib
+seaborn
+python-box==6.0.2
+pyYAML 
+tqdm
+ensure==1.0.2
+joblib
+types-PyYAML
+scipy
+Flask
+Flask-Cors
+gdown                #reading the data from google drive 
+-e .                 #e=editable mode and . is current directory where setup.py is present
+                     #to make the src as a local package with help of setup.py and __init__.py constructor
+ 
