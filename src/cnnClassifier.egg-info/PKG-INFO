@@ -6,11 +6,35 @@ Home-page: https://github.com/Dhiraj Kumar Rouniyar/MLflow-DVC
 Author: Dhiraj Kumar Rouniyar
 Author-email: dkrouniyar@wpi.edu
 Project-URL: Bug Tracker, https://github.com/Dhiraj Kumar Rouniyar/MLflow-DVC/issues
+Description-Content-Type: text/markdown
 Dynamic: author
 Dynamic: author-email
 Dynamic: description
+Dynamic: description-content-type
 Dynamic: home-page
 Dynamic: project-url
 Dynamic: summary
 
 # MLflow-DVC
+
+
+...
+# How to run?
+...
+### STEPS:
+
+clone the repository
+
+```bash
+https://github.com/DhirajRouniyar/MLflow-DVC
+```
+
+### STEP 01- Create a conda environment after opening the repository
+
+```bash
+conda create -n cnncls python=3.8 -y
+```
+
+```bash
+conda activate cnncls
+```
