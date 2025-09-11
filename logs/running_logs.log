@@ -183,3 +183,371 @@
 [2025-09-08 22:55:16,709: INFO: main: >>>>> stage Training completed <<<<< 
 
  x=========x]
+[2025-09-08 23:40:44,383: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-08 23:40:44,395: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:40:44,397: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:40:44,398: INFO: common: created directory at: artifacts]
+[2025-09-08 23:40:44,398: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-08 23:40:44,398: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-08 23:40:48,278: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-08 23:40:48,704: INFO: main: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-08 23:40:48,704: INFO: main: *********************]
+[2025-09-08 23:40:48,704: INFO: main: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-08 23:40:48,704: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:40:48,704: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:40:48,704: INFO: common: created directory at: artifacts]
+[2025-09-08 23:40:48,704: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-08 23:40:53,885: INFO: main: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-08 23:40:53,885: INFO: main: *********************]
+[2025-09-08 23:40:53,886: INFO: main: >>>>>>> stage Training started <<<<<<<]
+[2025-09-08 23:40:53,887: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:40:53,888: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:40:53,888: INFO: common: created directory at: artifacts]
+[2025-09-08 23:40:53,888: INFO: common: created directory at: artifacts\training]
+[2025-09-08 23:41:25,008: ERROR: main: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.]
+Traceback (most recent call last):
+  File "C:\Users\dhira\Desktop\MLflow\MLflow-DVC\main.py", line 33, in <module>
+    model_trainer.main()
+  File "c:\users\dhira\desktop\mlflow\mlflow-dvc\src\cnnClassifier\pipeline\stage_03_model_training.py", line 16, in main
+    training.get_base_model()
+  File "c:\users\dhira\desktop\mlflow\mlflow-dvc\src\cnnClassifier\components\model_training.py", line 21, in get_base_model
+    model = models.vgg16(weights=None)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\_utils.py", line 142, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\_utils.py", line 228, in inner_wrapper
+    return builder(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\vgg.py", line 433, in vgg16
+    return _vgg("D", False, weights, progress, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\vgg.py", line 103, in _vgg
+    model = VGG(make_layers(cfgs[cfg], batch_norm=batch_norm), **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\vgg.py", line 44, in __init__
+    nn.Linear(512 * 7 * 7, 4096),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torch\nn\modules\linear.py", line 106, in __init__
+    torch.empty((out_features, in_features), **factory_kwargs)
+RuntimeError: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 411041792 bytes.
+[2025-09-08 23:42:05,273: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:42:05,275: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:42:05,276: INFO: common: created directory at: artifacts]
+[2025-09-08 23:42:05,277: INFO: common: created directory at: artifacts\training]
+[2025-09-08 23:43:20,768: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:43:20,773: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:43:20,775: INFO: common: created directory at: artifacts]
+[2025-09-08 23:43:20,776: INFO: common: created directory at: artifacts\training]
+[2025-09-08 23:45:17,162: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-08 23:45:17,162: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:45:17,162: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:45:17,162: INFO: common: created directory at: artifacts]
+[2025-09-08 23:45:17,162: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-08 23:45:17,162: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-08 23:45:21,205: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-08 23:45:21,604: INFO: main: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-08 23:45:21,604: INFO: main: *********************]
+[2025-09-08 23:45:21,604: INFO: main: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-08 23:45:21,604: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:45:21,604: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:45:21,604: INFO: common: created directory at: artifacts]
+[2025-09-08 23:45:21,604: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-08 23:45:22,564: INFO: main: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-08 23:45:22,564: INFO: main: *********************]
+[2025-09-08 23:45:22,564: INFO: main: >>>>>>> stage Training started <<<<<<<]
+[2025-09-08 23:45:22,564: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:45:22,564: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:45:22,564: INFO: common: created directory at: artifacts]
+[2025-09-08 23:45:22,564: INFO: common: created directory at: artifacts\training]
+[2025-09-08 23:47:48,163: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-08 23:47:48,178: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:47:48,178: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:47:48,178: INFO: common: created directory at: artifacts]
+[2025-09-08 23:47:48,178: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-08 23:47:48,178: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-08 23:47:51,637: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-08 23:47:52,028: INFO: main: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-08 23:47:52,028: INFO: main: *********************]
+[2025-09-08 23:47:52,028: INFO: main: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-08 23:47:52,028: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:47:52,028: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:47:52,028: INFO: common: created directory at: artifacts]
+[2025-09-08 23:47:52,028: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-08 23:47:52,969: INFO: main: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-08 23:47:52,969: INFO: main: *********************]
+[2025-09-08 23:47:52,969: INFO: main: >>>>>>> stage Training started <<<<<<<]
+[2025-09-08 23:47:52,969: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:47:52,971: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:47:52,971: INFO: common: created directory at: artifacts]
+[2025-09-08 23:47:52,972: INFO: common: created directory at: artifacts\training]
+[2025-09-08 23:48:50,637: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-08 23:48:50,637: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:48:50,637: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:48:50,637: INFO: common: created directory at: artifacts]
+[2025-09-08 23:48:50,637: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-08 23:48:50,637: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-08 23:48:54,462: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-08 23:48:54,814: INFO: main: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-08 23:48:54,814: INFO: main: *********************]
+[2025-09-08 23:48:54,814: INFO: main: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-08 23:48:54,814: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:48:54,814: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:48:54,814: INFO: common: created directory at: artifacts]
+[2025-09-08 23:48:54,814: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-08 23:48:55,613: INFO: main: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-08 23:48:55,621: INFO: main: *********************]
+[2025-09-08 23:48:55,621: INFO: main: >>>>>>> stage Training started <<<<<<<]
+[2025-09-08 23:48:55,622: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-08 23:48:55,622: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-08 23:48:55,622: INFO: common: created directory at: artifacts]
+[2025-09-08 23:48:55,622: INFO: common: created directory at: artifacts\training]
+[2025-09-08 23:49:29,364: ERROR: main: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 67108864 bytes.]
+Traceback (most recent call last):
+  File "C:\Users\dhira\Desktop\MLflow\MLflow-DVC\main.py", line 33, in <module>
+    model_trainer.main()
+  File "c:\users\dhira\desktop\mlflow\mlflow-dvc\src\cnnClassifier\pipeline\stage_03_model_training.py", line 16, in main
+    training.get_base_model()
+  File "c:\users\dhira\desktop\mlflow\mlflow-dvc\src\cnnClassifier\components\model_training.py", line 21, in get_base_model
+    model = models.vgg16(weights=None)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\_utils.py", line 142, in wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\_utils.py", line 228, in inner_wrapper
+    return builder(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\vgg.py", line 433, in vgg16
+    return _vgg("D", False, weights, progress, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\vgg.py", line 103, in _vgg
+    model = VGG(make_layers(cfgs[cfg], batch_norm=batch_norm), **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torchvision\models\vgg.py", line 47, in __init__
+    nn.Linear(4096, 4096),
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dhira\miniconda3\envs\MLflow\Lib\site-packages\torch\nn\modules\linear.py", line 106, in __init__
+    torch.empty((out_features, in_features), **factory_kwargs)
+RuntimeError: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 67108864 bytes.
+[2025-09-09 21:47:44,959: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-09 21:47:44,990: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 21:47:45,021: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 21:47:45,021: INFO: common: created directory at: artifacts]
+[2025-09-09 21:47:45,021: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-09 21:47:45,021: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-09 21:47:49,365: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-09 21:47:49,774: INFO: main: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-09 21:47:49,775: INFO: main: *********************]
+[2025-09-09 21:47:49,775: INFO: main: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-09 21:47:49,776: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 21:47:49,777: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 21:47:49,777: INFO: common: created directory at: artifacts]
+[2025-09-09 21:47:49,777: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-09 21:47:50,755: INFO: main: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-09 21:47:50,755: INFO: main: *********************]
+[2025-09-09 21:47:50,755: INFO: main: >>>>>>> stage Training started <<<<<<<]
+[2025-09-09 21:47:50,756: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 21:47:50,757: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 21:47:50,758: INFO: common: created directory at: artifacts]
+[2025-09-09 21:47:50,758: INFO: common: created directory at: artifacts\training]
+[2025-09-09 21:48:05,854: INFO: main: >>>>> stage Training completed <<<<< 
+
+ x=========x]
+[2025-09-09 23:05:26,689: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 23:05:26,694: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 23:05:26,696: INFO: common: created directory at: artifacts]
+[2025-09-09 23:07:58,621: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 23:07:58,622: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 23:07:58,622: INFO: common: created directory at: artifacts]
+[2025-09-09 23:09:05,987: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 23:09:05,990: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 23:09:05,991: INFO: common: created directory at: artifacts]
+[2025-09-09 23:09:49,740: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 23:09:49,743: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 23:09:49,746: INFO: common: created directory at: artifacts]
+[2025-09-09 23:14:23,734: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 23:14:23,737: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 23:14:23,738: INFO: common: created directory at: artifacts]
+[2025-09-09 23:15:46,635: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 23:15:46,639: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 23:15:46,641: INFO: common: created directory at: artifacts]
+[2025-09-09 23:15:50,713: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DhirajRouniyar/MLflow-DVC "HTTP/1.1 200 OK"]
+[2025-09-09 23:15:50,723: INFO: helpers: Initialized MLflow to track repo "DhirajRouniyar/MLflow-DVC"]
+[2025-09-09 23:15:50,723: INFO: helpers: Repository DhirajRouniyar/MLflow-DVC initialized!]
+[2025-09-09 23:15:53,011: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 23:15:53,014: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 23:15:53,016: INFO: common: created directory at: artifacts]
+[2025-09-09 23:15:55,974: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DhirajRouniyar/MLflow-DVC "HTTP/1.1 200 OK"]
+[2025-09-09 23:15:55,974: INFO: helpers: Initialized MLflow to track repo "DhirajRouniyar/MLflow-DVC"]
+[2025-09-09 23:15:55,974: INFO: helpers: Repository DhirajRouniyar/MLflow-DVC initialized!]
+[2025-09-09 23:19:09,516: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 23:19:09,519: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 23:19:09,520: INFO: common: created directory at: artifacts]
+[2025-09-09 23:19:12,447: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DhirajRouniyar/MLflow-DVC "HTTP/1.1 200 OK"]
+[2025-09-09 23:19:12,456: INFO: helpers: Initialized MLflow to track repo "DhirajRouniyar/MLflow-DVC"]
+[2025-09-09 23:19:12,462: INFO: helpers: Repository DhirajRouniyar/MLflow-DVC initialized!]
+[2025-09-09 23:59:20,785: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-09 23:59:20,797: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-09 23:59:20,797: INFO: common: created directory at: artifacts]
+[2025-09-10 00:00:14,705: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:00:14,706: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:00:14,706: INFO: common: created directory at: artifacts]
+[2025-09-10 00:00:17,876: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DhirajRouniyar/MLflow-DVC "HTTP/1.1 200 OK"]
+[2025-09-10 00:00:17,889: INFO: helpers: Initialized MLflow to track repo "DhirajRouniyar/MLflow-DVC"]
+[2025-09-10 00:00:17,889: INFO: helpers: Repository DhirajRouniyar/MLflow-DVC initialized!]
+[2025-09-10 00:27:31,285: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-10 00:27:31,285: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:27:31,285: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:27:31,285: INFO: common: created directory at: artifacts]
+[2025-09-10 00:27:31,285: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-10 00:27:31,285: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-10 00:27:35,369: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-10 00:27:35,721: INFO: main: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-10 00:27:35,721: INFO: main: *********************]
+[2025-09-10 00:27:35,721: INFO: main: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-10 00:27:35,721: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:27:35,721: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:27:35,721: INFO: common: created directory at: artifacts]
+[2025-09-10 00:27:35,721: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-10 00:27:36,681: INFO: main: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-10 00:27:36,681: INFO: main: *********************]
+[2025-09-10 00:27:36,681: INFO: main: >>>>>>> stage Training started <<<<<<<]
+[2025-09-10 00:27:36,683: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:27:36,684: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:27:36,684: INFO: common: created directory at: artifacts]
+[2025-09-10 00:27:36,685: INFO: common: created directory at: artifacts\training]
+[2025-09-10 00:27:50,081: INFO: main: >>>>> stage Training completed <<<<< 
+
+ x=========x]
+[2025-09-10 00:27:50,081: INFO: main: *********************]
+[2025-09-10 00:27:50,081: INFO: main: >>>>>>> stage Evaluation stage started <<<<<<<]
+[2025-09-10 00:27:50,081: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:27:50,084: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:27:50,085: INFO: common: created directory at: artifacts]
+[2025-09-10 00:27:52,620: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-09-10 00:27:52,631: INFO: helpers: Accessing as DhirajRouniyar]
+[2025-09-10 00:27:52,899: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DhirajRouniyar/MLflow-DVC "HTTP/1.1 200 OK"]
+[2025-09-10 00:27:53,069: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-09-10 00:27:53,079: INFO: helpers: Initialized MLflow to track repo "DhirajRouniyar/MLflow-DVC"]
+[2025-09-10 00:27:53,079: INFO: helpers: Repository DhirajRouniyar/MLflow-DVC initialized!]
+[2025-09-10 00:28:35,251: INFO: main: >>>>> stage Evaluation stage completed <<<<< 
+
+ x=========x]
+[2025-09-10 00:31:05,869: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-10 00:31:05,869: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:31:05,869: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:31:05,869: INFO: common: created directory at: artifacts]
+[2025-09-10 00:31:05,869: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-10 00:31:05,877: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-10 00:31:11,969: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-10 00:31:12,335: INFO: main: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-10 00:31:12,337: INFO: main: *********************]
+[2025-09-10 00:31:12,337: INFO: main: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-10 00:31:12,337: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:31:12,337: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:31:12,337: INFO: common: created directory at: artifacts]
+[2025-09-10 00:31:12,337: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-10 00:31:13,028: INFO: main: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-10 00:31:13,028: INFO: main: *********************]
+[2025-09-10 00:31:13,028: INFO: main: >>>>>>> stage Training started <<<<<<<]
+[2025-09-10 00:31:13,028: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:31:13,028: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:31:13,028: INFO: common: created directory at: artifacts]
+[2025-09-10 00:31:13,028: INFO: common: created directory at: artifacts\training]
+[2025-09-10 00:31:27,964: INFO: main: >>>>> stage Training completed <<<<< 
+
+ x=========x]
+[2025-09-10 00:31:27,964: INFO: main: *********************]
+[2025-09-10 00:31:27,964: INFO: main: >>>>>>> stage Evaluation stage started <<<<<<<]
+[2025-09-10 00:31:27,966: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:31:27,966: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:31:27,966: INFO: common: created directory at: artifacts]
+[2025-09-10 00:31:30,426: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-09-10 00:31:30,436: INFO: helpers: Accessing as DhirajRouniyar]
+[2025-09-10 00:31:30,774: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DhirajRouniyar/MLflow-DVC "HTTP/1.1 200 OK"]
+[2025-09-10 00:31:30,942: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-09-10 00:31:30,952: INFO: helpers: Initialized MLflow to track repo "DhirajRouniyar/MLflow-DVC"]
+[2025-09-10 00:31:30,952: INFO: helpers: Repository DhirajRouniyar/MLflow-DVC initialized!]
+[2025-09-10 00:32:12,121: INFO: main: >>>>> stage Evaluation stage completed <<<<< 
+
+ x=========x]
+[2025-09-10 00:56:23,337: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-10 00:56:23,338: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:56:23,363: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:56:23,364: INFO: common: created directory at: artifacts]
+[2025-09-10 00:56:23,365: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-10 00:56:23,366: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-10 00:56:27,298: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-10 00:56:27,666: INFO: main: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-10 00:56:27,666: INFO: main: *********************]
+[2025-09-10 00:56:27,666: INFO: main: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-10 00:56:27,666: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:56:27,666: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:56:27,666: INFO: common: created directory at: artifacts]
+[2025-09-10 00:56:27,666: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-10 00:56:28,701: INFO: main: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-10 00:56:28,702: INFO: main: *********************]
+[2025-09-10 00:56:28,702: INFO: main: >>>>>>> stage Training started <<<<<<<]
+[2025-09-10 00:56:28,702: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:56:28,702: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:56:28,702: INFO: common: created directory at: artifacts]
+[2025-09-10 00:56:28,702: INFO: common: created directory at: artifacts\training]
+[2025-09-10 00:56:43,091: INFO: main: >>>>> stage Training completed <<<<< 
+
+ x=========x]
+[2025-09-10 00:56:43,091: INFO: main: *********************]
+[2025-09-10 00:56:43,091: INFO: main: >>>>>>> stage Evaluation stage started <<<<<<<]
+[2025-09-10 00:56:43,091: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-10 00:56:43,091: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-10 00:56:43,101: INFO: common: created directory at: artifacts]
+[2025-09-10 00:56:45,613: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-09-10 00:56:45,616: INFO: helpers: Accessing as DhirajRouniyar]
+[2025-09-10 00:56:45,846: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/repos/DhirajRouniyar/MLflow-DVC "HTTP/1.1 200 OK"]
+[2025-09-10 00:56:46,027: INFO: _client: HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"]
+[2025-09-10 00:56:46,030: INFO: helpers: Initialized MLflow to track repo "DhirajRouniyar/MLflow-DVC"]
+[2025-09-10 00:56:46,032: INFO: helpers: Repository DhirajRouniyar/MLflow-DVC initialized!]
+[2025-09-10 00:57:25,934: INFO: main: >>>>> stage Evaluation stage completed <<<<< 
+
+ x=========x]
+[2025-09-11 00:06:04,804: INFO: stage_01_data_ingestion: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-11 00:06:04,806: INFO: common: yaml_file: config\config.yaml loaded successfully]
+[2025-09-11 00:06:04,806: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 00:06:04,808: INFO: common: created directory at: artifacts]
+[2025-09-11 00:06:04,808: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-11 00:06:04,808: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-11 00:06:08,692: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-11 00:06:09,103: INFO: stage_01_data_ingestion: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]

@@ -2,7 +2,8 @@ from cnnClassifier.constants import *
 from cnnClassifier.utils.common import read_yaml, create_directories
 from cnnClassifier.entity.config_entity import (DataIngestionConfig, 
                                                 PrepareBaseModelConfig,
-                                                TrainingConfig)
+                                                TrainingConfig,
+                                                EvaluationConfig)
 import os
 #5. Update the configuration manager in src config
 
@@ -70,3 +71,15 @@ class ConfigurationManager:
           )
 
           return training_config
+    
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_to_model="artifacts/training/model.pt",
+            training_data="artifacts/data_ingestion/kidney-ct-scan-image",
+            mlflow_uri="DVC.mlflow",
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE,
+            params_classes = self.params.CLASSES
+        )
+        return eval_config
