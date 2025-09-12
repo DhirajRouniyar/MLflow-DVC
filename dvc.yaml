@@ -36,7 +36,7 @@ stages:
       - BATCH_SIZE
       - AUGMENTATION
     outs:
-      - artifacts/training/model.h5
+      - artifacts/training/model.pt
 
 
   evaluation:
@@ -45,7 +45,7 @@ stages:
       - src/cnnClassifier/pipeline/stage_04_model_evaluation.py
       - config/config.yaml
       - artifacts/data_ingestion/kidney-ct-scan-image
-      - artifacts/training/model.h5
+      - artifacts/training/model.pt
     params:
       - IMAGE_SIZE
       - BATCH_SIZE

@@ -55,3 +55,8 @@ with mlflow.start_run():
   mlflow.log_metric('metric name', 1)
 
 ```
+```bash
+dvc init
+dvc repro
+dvc dag
+```

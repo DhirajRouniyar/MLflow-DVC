@@ -551,3 +551,84 @@ RuntimeError: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not
 [2025-09-11 00:06:09,103: INFO: stage_01_data_ingestion: >>>>> stage Data Ingestion stage completed <<<<< 
 
  x====x]
+[2025-09-11 06:45:11,595: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-11 06:45:11,596: INFO: common: yaml_file: config/config.yaml loaded successfully]
+[2025-09-11 06:45:11,597: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 06:45:11,597: INFO: common: created directory at: artifacts]
+[2025-09-11 06:45:11,597: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-11 06:45:11,597: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-11 06:45:15,624: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-11 06:45:15,957: INFO: main: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-11 06:45:15,957: INFO: main: *********************]
+[2025-09-11 06:45:15,957: INFO: main: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-11 06:45:15,958: INFO: common: yaml_file: config/config.yaml loaded successfully]
+[2025-09-11 06:45:15,958: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 06:45:15,958: INFO: common: created directory at: artifacts]
+[2025-09-11 06:45:15,958: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-11 06:45:34,445: INFO: main: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-11 06:45:34,445: INFO: main: *********************]
+[2025-09-11 06:45:34,445: INFO: main: >>>>>>> stage Training started <<<<<<<]
+[2025-09-11 06:45:34,446: INFO: common: yaml_file: config/config.yaml loaded successfully]
+[2025-09-11 06:45:34,447: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 06:45:34,447: INFO: common: created directory at: artifacts]
+[2025-09-11 06:45:34,447: INFO: common: created directory at: artifacts/training]
+[2025-09-11 06:45:42,007: INFO: main: >>>>> stage Training completed <<<<< 
+
+ x=========x]
+[2025-09-11 06:45:42,007: INFO: main: *********************]
+[2025-09-11 06:45:42,007: INFO: main: >>>>>>> stage Evaluation stage started <<<<<<<]
+[2025-09-11 06:45:42,008: INFO: common: yaml_file: config/config.yaml loaded successfully]
+[2025-09-11 06:45:42,009: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 06:45:42,009: INFO: common: created directory at: artifacts]
+[2025-09-11 06:45:43,680: INFO: main: >>>>> stage Evaluation stage completed <<<<< 
+
+ x=========x]
+[2025-09-11 06:52:12,779: INFO: stage_01_data_ingestion: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-09-11 06:52:12,780: INFO: common: yaml_file: config/config.yaml loaded successfully]
+[2025-09-11 06:52:12,780: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 06:52:12,780: INFO: common: created directory at: artifacts]
+[2025-09-11 06:52:12,781: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-11 06:52:12,781: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-11 06:52:17,049: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-11 06:52:17,338: INFO: stage_01_data_ingestion: >>>>> stage Data Ingestion stage completed <<<<< 
+
+ x====x]
+[2025-09-11 06:52:19,028: INFO: stage_02_prepare_base_model: *********************]
+[2025-09-11 06:52:19,028: INFO: stage_02_prepare_base_model: >>>>>>> stage Prepare base model started <<<<<<<]
+[2025-09-11 06:52:19,029: INFO: common: yaml_file: config/config.yaml loaded successfully]
+[2025-09-11 06:52:19,030: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 06:52:19,030: INFO: common: created directory at: artifacts]
+[2025-09-11 06:52:19,030: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-11 06:52:19,754: INFO: stage_02_prepare_base_model: >>>>> stage Prepare base model completed <<<<< 
+
+ x=========x]
+[2025-09-11 06:52:21,535: INFO: stage_03_model_training: *********************]
+[2025-09-11 06:52:21,535: INFO: stage_03_model_training: >>>>>>> stage Training started <<<<<<<]
+[2025-09-11 06:52:21,536: INFO: common: yaml_file: config/config.yaml loaded successfully]
+[2025-09-11 06:52:21,537: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 06:52:21,537: INFO: common: created directory at: artifacts]
+[2025-09-11 06:52:21,537: INFO: common: created directory at: artifacts/training]
+[2025-09-11 06:52:28,969: INFO: stage_03_model_training: >>>>> stage Training completed <<<<< 
+
+ x=========x]
+[2025-09-11 06:53:37,742: INFO: stage_03_model_training: *********************]
+[2025-09-11 06:53:37,742: INFO: stage_03_model_training: >>>>>>> stage Training started <<<<<<<]
+[2025-09-11 06:53:37,743: INFO: common: yaml_file: config/config.yaml loaded successfully]
+[2025-09-11 06:53:37,744: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 06:53:37,744: INFO: common: created directory at: artifacts]
+[2025-09-11 06:53:37,744: INFO: common: created directory at: artifacts/training]
+[2025-09-11 06:53:45,221: INFO: stage_03_model_training: >>>>> stage Training completed <<<<< 
+
+ x=========x]
+[2025-09-11 06:53:47,485: INFO: stage_04_model_evaluation: *********************]
+[2025-09-11 06:53:47,486: INFO: stage_04_model_evaluation: >>>>>>> stage Evaluation Stage started <<<<<<<]
+[2025-09-11 06:53:47,487: INFO: common: yaml_file: config/config.yaml loaded successfully]
+[2025-09-11 06:53:47,487: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-11 06:53:47,487: INFO: common: created directory at: artifacts]
+[2025-09-11 06:53:49,503: INFO: stage_04_model_evaluation: >>>>> stage Evaluation Stage completed <<<<< 
+
+ x=========x]
