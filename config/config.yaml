@@ -14,3 +14,5 @@ prepare_base_model:
 training:
     root_dir: artifacts/training
     trained_model_path: artifacts/training/model.pt
+    trained_model_2nd_path: model/model.pt
+    

@@ -44,7 +44,7 @@ class Evaluation:
         )
 
     @staticmethod
-    def load_model(path: Path, num_classes: int, device="cpu"):
+    def load_model(path: Path, num_classes: int, device="cuda"):
         """Recreate architecture and load trained weights"""
         model = models.vgg16(weights=None)
         in_features = 512 * 7 * 7

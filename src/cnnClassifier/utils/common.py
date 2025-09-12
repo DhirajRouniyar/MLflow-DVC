@@ -133,6 +133,17 @@ def decodeImage(imgstring, fileName):
         f.write(imgdata)
         f.close()
 
+# def decodeImage(imgstring, fileName):
+#     if "," in imgstring:
+#         imgstring = imgstring.split(",")[1]
+#     try:
+#         imgdata = base64.b64decode(imgstring)
+#         with open(fileName, 'wb') as f:
+#             f.write(imgdata)
+#         print(f"[INFO] Decoded image saved to {fileName}")
+#     except Exception as e:
+#         print(f"[ERROR] Could not decode and save image: {e}")
+
 def encodeImageIntoBase64(croppedImagePath):
     with open(croppedImagePath, "rb") as f:
         return base64.b64encode(f.read())

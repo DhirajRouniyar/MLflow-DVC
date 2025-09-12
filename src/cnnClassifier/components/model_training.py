@@ -128,3 +128,4 @@ class Training:
                   f"Val Loss: {val_loss:.4f} Val Acc: {val_acc:.4f}")
 
         self.save_model(self.config.trained_model_path, self.model)
+        self.save_model(self.config.trained_model_2nd_path, self.model)

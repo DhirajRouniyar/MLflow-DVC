@@ -632,3 +632,49 @@ RuntimeError: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not
 [2025-09-11 06:53:49,503: INFO: stage_04_model_evaluation: >>>>> stage Evaluation Stage completed <<<<< 
 
  x=========x]
+[2025-09-12 03:27:19,332: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-12 03:27:20,776: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.240:8080]
+[2025-09-12 03:27:20,776: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-09-12 03:28:17,089: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:28:17] "GET / HTTP/1.1" 200 -]
+[2025-09-12 03:28:29,209: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:28:29] "GET / HTTP/1.1" 200 -]
+[2025-09-12 03:29:08,872: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask_cors/extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/usr/local/lib/python3.8/site-packages/flask_cors/decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 40, in predictRoute
+    result = clApp.classifier.predict()
+  File "/app/src/cnnClassifier/pipeline/prediction.py", line 39, in predict
+    img = Image.open(self.filename).convert('RGB')
+  File "/usr/local/lib/python3.8/site-packages/PIL/Image.py", line 3498, in open
+    raise UnidentifiedImageError(msg)
+PIL.UnidentifiedImageError: cannot identify image file '/app/inputImage.jpg'
+[2025-09-12 03:29:08,874: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:29:08] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-09-12 03:33:56,704: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-12 03:33:58,127: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.240:8080]
+[2025-09-12 03:33:58,127: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-09-12 03:34:07,093: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:34:07] "GET / HTTP/1.1" 200 -]
+[2025-09-12 03:36:10,180: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-12 03:36:10,192: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.240:8080]
+[2025-09-12 03:36:10,192: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-09-12 03:36:15,031: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:36:15] "GET / HTTP/1.1" 200 -]
+[2025-09-12 03:36:29,360: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:36:29] "POST /predict HTTP/1.1" 200 -]
+[2025-09-12 03:36:56,673: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:36:56] "POST /predict HTTP/1.1" 200 -]
