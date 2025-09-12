@@ -62,11 +62,11 @@ dvc dag
 ```
 ### AWS-CICD-Deployment-with-Github-Actions
 # Output
-![Alt text] (https://github.com/DhirajRouniyar/MLflow-DVC/blob/main/asset/CICD.png)
+![CICD](https://github.com/DhirajRouniyar/MLflow-DVC/blob/mainasset/CICD.png)
 
-![Alt text] (https://github.com/DhirajRouniyar/MLflow-DVC/blob/main/asset/ECR_instance_connect.png)
+![ECR_CONNECT](https://github.com/DhirajRouniyar/MLflow-DVC/blob/main/asset/ECR_instance_connect.png)
 
-![Alt text] (https://github.com/DhirajRouniyar/MLflow-DVC/blob/main/asset/ECR_instance_run.png)
+![ECR_RUN](https://github.com/DhirajRouniyar/MLflow-DVC/blob/main/asset/ECR_instance_run.png)
 
 # 1. Login to AWS console.
 # 2. Create IAM user for deployment
