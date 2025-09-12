@@ -678,3 +678,24 @@ PIL.UnidentifiedImageError: cannot identify image file '/app/inputImage.jpg'
 [2025-09-12 03:36:15,031: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:36:15] "GET / HTTP/1.1" 200 -]
 [2025-09-12 03:36:29,360: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:36:29] "POST /predict HTTP/1.1" 200 -]
 [2025-09-12 03:36:56,673: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 03:36:56] "POST /predict HTTP/1.1" 200 -]
+[2025-09-12 06:19:31,513: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-12 06:19:32,937: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.240:8080]
+[2025-09-12 06:19:32,938: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-09-12 06:19:46,984: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 06:19:46] "GET / HTTP/1.1" 200 -]
+[2025-09-12 17:27:24,924: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-12 17:27:26,373: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.240:8080]
+[2025-09-12 17:27:26,373: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-09-12 17:39:47,148: INFO: common: yaml_file: params.yaml loaded successfully]
+[2025-09-12 17:39:48,575: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.240:8080]
+[2025-09-12 17:39:48,575: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-09-12 17:39:51,770: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 17:39:51] "GET / HTTP/1.1" 200 -]
+[2025-09-12 17:40:03,465: INFO: _internal: 127.0.0.1 - - [12/Sep/2025 17:40:03] "POST /predict HTTP/1.1" 200 -]
