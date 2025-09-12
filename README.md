@@ -62,7 +62,7 @@ dvc dag
 ```
 ### AWS-CICD-Deployment-with-Github-Actions
 # Output
-![CICD](https://github.com/DhirajRouniyar/MLflow-DVC/blob/mainasset/CICD.png)
+![cicd](https://github.com/DhirajRouniyar/MLflow-DVC/blob/main/asset/CICD.png)
 
 ![ECR_CONNECT](https://github.com/DhirajRouniyar/MLflow-DVC/blob/main/asset/ECR_instance_connect.png)
 
